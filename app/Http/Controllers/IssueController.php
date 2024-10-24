@@ -15,4 +15,9 @@ class IssueController extends Controller
 
         return IssueResource::collection($issues);
     }
+
+    public function show(Issue $issue): IssueResource
+    {
+        return new IssueResource($issue);
+    }
 }
